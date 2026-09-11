@@ -1,7 +1,8 @@
 %hook YTSettingsGroupData
 
 - (NSMutableArray *)orderedCategories {
-    NSMutableArray *mutableCategories = [NSMutableArray arrayWithArray:(NSArray *)_logos_orig$_ungrouped$YTSettingsGroupData$orderedCategories(self, _cmd)];
+    NSArray *originalArray = (NSArray *)_logos_orig$_ungrouped$YTSettingsGroupData$orderedCategories(self, _cmd);
+    NSMutableArray *mutableCategories = [NSMutableArray arrayWithArray:originalArray];
     return mutableCategories;
 }
 
